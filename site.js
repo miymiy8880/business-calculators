@@ -1,2 +1,29 @@
-const input=document.querySelector('#search');
-if(input){const cards=[...document.querySelectorAll('.card')],empty=document.querySelector('#empty');input.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();let n=0;cards.forEach(c=>{const ok=(c.dataset.search+' '+c.textContent).toLowerCase().includes(q);c.style.display=ok?'flex':'none';if(ok)n++});empty.style.display=n?'none':'block'})}
+const searchInput = document.getElementById("calculatorSearch");
+const cards = document.querySelectorAll(".calculator-card");
+const noResults = document.getElementById("noResults");
+
+if (searchInput) {
+  searchInput.addEventListener("input", function () {
+
+    const query = this.value.toLowerCase().trim();
+    let visible = 0;
+
+    cards.forEach(card => {
+
+      const text = card.textContent.toLowerCase();
+
+      if (text.includes(query)) {
+        card.style.display = "";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+    if (noResults) {
+      noResults.style.display = visible === 0 ? "block" : "none";
+    }
+
+  });
+}
