@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Packaging ROI Calculator | Business Calculators</title>
+
+  <meta
+    name="description"
+    content="Estimate the return from packaging equipment, automation or process improvements using labor savings, material savings and additional profit."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://miymiy8880.github.io/business-calculators/calculators/packaging-roi.html"
+  >
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Packaging ROI Calculator">
+
+  <meta
+    property="og:description"
+    content="Estimate the return from packaging equipment, automation or process improvements."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:url"
+    content="https://miymiy8880.github.io/business-calculators/calculators/packaging-roi.html"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
+
+  <!-- WebApplication structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Packaging ROI Calculator",
+    "description": "Estimate the return from packaging equipment, automation or process improvements.",
+    "url": "https://miymiy8880.github.io/business-calculators/calculators/packaging-roi.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+
+  <!-- FAQ structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ROI, or return on investment, measures the return generated relative to the investment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this calculator calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Packaging ROI is calculated by adding annual labor savings, annual material savings and annual additional profit to determine annual benefit, subtracting the packaging investment, dividing by the investment and multiplying by 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ROI be negative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A negative ROI means the annual benefits do not recover the packaging investment under the assumptions used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Include the packaging investment and realistic annual labor savings, material savings and additional profit attributable to the project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ROI the same as profit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Profit or savings are monetary amounts, while ROI expresses the net benefit relative to the original investment."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body data-calculator="packaging-roi">
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a
+      class="brand"
+      href="../index.html"
+      aria-label="Business Calculators home"
+    >
+      BUSINESS<span>CALCULATORS</span>
+    </a>
+
+
+    <nav>
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      <a href="../index.html#about">
+        About
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     INTRO + CALCULATOR
+====================================================== -->
+
+<section class="page">
+
+  <div class="wrap">
+
+
+    <!-- Breadcrumb -->
+
+    <div class="crumb">
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      /
+
+      Packaging ROI Calculator
+
+    </div>
+
+
+
+    <div class="layout">
+
+
+      <!-- =================================================
+           INTRO
+      ================================================== -->
+
+      <div class="intro">
+
+        <p class="kicker">
+          PACKAGING
+        </p>
+
+
+        <h1>
+          Packaging ROI Calculator
+        </h1>
+
+
+        <p class="lead">
+          Estimate the return from packaging equipment,
+          automation or process improvements.
+        </p>
+
+
+        <p>
+          Packaging ROI combines labor savings, material
+          savings and additional profit.
+        </p>
+
+
+        <p>
+          Enter your assumptions to estimate the result.
+          Use consistent units and time periods when
+          comparing alternatives.
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CALCULATOR
+      ================================================== -->
+
+      <div class="calc">
+
+        <h2>
+          Calculate
+        </h2>
+
+
+        <form id="packagingRoiForm">
+
+
+          <!-- Packaging investment -->
+
+          <div class="field">
+
+            <label for="packagingInvestment">
+              Packaging investment
+            </label>
+
+            <input
+              type="number"
+              id="packagingInvestment"
+              name="packagingInvestment"
+              placeholder="50000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Labor savings -->
+
+          <div class="field">
+
+            <label for="laborSavings">
+              Annual labor savings
+            </label>
+
+            <input
+              type="number"
+              id="laborSavings"
+              name="laborSavings"
+              placeholder="18000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Material savings -->
+
+          <div class="field">
+
+            <label for="materialSavings">
+              Annual material savings
+            </label>
+
+            <input
+              type="number"
+              id="materialSavings"
+              name="materialSavings"
+              placeholder="12000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Additional profit -->
+
+          <div class="field">
+
+            <label for="additionalProfit">
+              Annual additional profit
+            </label>
+
+            <input
+              type="number"
+              id="additionalProfit"
+              name="additionalProfit"
+              placeholder="10000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            Calculate
+          </button>
+
+
+
+          <div
+            class="error"
+            id="error"
+            role="alert"
+          ></div>
+
+
+
+          <!-- Results -->
+
+          <div class="results">
+
+            <div class="result-label">
+              Calculated result
+            </div>
+
+
+            <div
+              class="result-main"
+              id="result"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-label"
+              id="resultSub"
+            ></div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FORMULA
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Formula
+    </h2>
+
+
+    <p>
+      The calculation used by this tool is:
+    </p>
+
+
+    <code class="formula">
+      ROI = ((Annual Benefit − Investment) ÷ Investment) × 100
+    </code>
+
+
+    <p>
+      Where annual benefit is the sum of annual labor
+      savings, annual material savings and annual
+      additional profit.
+    </p>
+
+
+    <code class="formula">
+      Annual Benefit = Labor Savings + Material Savings + Additional Profit
+    </code>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXAMPLE
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Example
+    </h2>
+
+
+    <div class="example">
+
+      <p>
+        A <strong>$50,000</strong> project produces
+        <strong>$18,000</strong> in annual labor savings,
+        <strong>$12,000</strong> in annual material savings
+        and <strong>$10,000</strong> in annual additional
+        profit.
+      </p>
+
+
+      <p>
+        Annual benefit:
+        <strong>
+          $18,000 + $12,000 + $10,000 = $40,000
+        </strong>
+      </p>
+
+
+      <p>
+        Packaging ROI:
+        <strong>
+          (($40,000 − $50,000) ÷ $50,000) × 100
+          = −20%
+        </strong>
+      </p>
+
+
+      <p>
+        Under this simple first-year ROI model, the project
+        produces a <strong>−20% ROI</strong> because its
+        first-year benefits do not fully recover the
+        initial investment.
+      </p>
+
+
+      <p class="disclaimer">
+        Actual performance can differ because of taxes,
+        financing, depreciation, working capital,
+        maintenance, attribution and other factors not
+        included in a simple ROI model.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INDUSTRY APPLICATIONS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Industry applications
+    </h2>
+
+
+    <p>
+      This calculator can support preliminary analysis
+      in areas such as:
+    </p>
+
+
+    <ul>
+
+      <li>
+        Packaging automation
+      </li>
+
+      <li>
+        Filling and labeling
+      </li>
+
+      <li>
+        Material reduction
+      </li>
+
+      <li>
+        Production efficiency
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Frequently asked questions
+    </h2>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          What is ROI?
+        </summary>
+
+        <p>
+          ROI, or return on investment, measures the return
+          generated relative to the investment required.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          How is this calculator calculated?
+        </summary>
+
+        <p>
+          Packaging ROI is calculated by adding annual labor
+          savings, annual material savings and annual
+          additional profit to determine annual benefit.
+          The investment is then subtracted from annual
+          benefit, divided by the investment and multiplied
+          by 100.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Can ROI be negative?
+        </summary>
+
+        <p>
+          Yes. A negative ROI means the annual benefits do
+          not recover the packaging investment under the
+          assumptions used.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          What should I include?
+        </summary>
+
+        <p>
+          Include the packaging investment and realistic
+          annual labor savings, material savings and
+          additional profit attributable to the project.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Is ROI the same as profit?
+        </summary>
+
+        <p>
+          No. Profit or savings are monetary amounts,
+          while ROI expresses the net benefit relative
+          to the original investment.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RELATED CALCULATORS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap">
+
+    <h2>
+      Related calculators
+    </h2>
+
+
+    <div class="related">
+
+
+      <a href="roi-calculator.html">
+        ROI Calculator
+      </a>
+
+
+      <a href="investment-roi.html">
+        Investment ROI Calculator
+      </a>
+
+
+      <a href="marketing-roi.html">
+        Marketing ROI Calculator
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <p class="disclaimer">
+      Disclaimer: This calculator provides estimates for
+      informational purposes and is not financial,
+      accounting, investment, tax or legal advice.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="wrap foot">
+
+    <div>
+
+      <strong>
+        Business Calculators
+      </strong>
+
+      <span>
+        Free tools for business and finance.
+      </span>
+
+    </div>
+
+
+    <a href="../index.html">
+      Home
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CALCULATOR LOGIC
+====================================================== -->
+
+<script>
+
+  const form =
+    document.getElementById("packagingRoiForm");
+
+
+  const packagingInvestment =
+    document.getElementById("packagingInvestment");
+
+
+  const laborSavings =
+    document.getElementById("laborSavings");
+
+
+  const materialSavings =
+    document.getElementById("materialSavings");
+
+
+  const additionalProfit =
+    document.getElementById("additionalProfit");
+
+
+  const result =
+    document.getElementById("result");
+
+
+  const resultSub =
+    document.getElementById("resultSub");
+
+
+  const error =
+    document.getElementById("error");
+
+
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      const investment =
+        Number(packagingInvestment.value);
+
+
+      const labor =
+        Number(laborSavings.value);
+
+
+      const material =
+        Number(materialSavings.value);
+
+
+      const profit =
+        Number(additionalProfit.value);
+
+
+
+      /*
+       * Validate inputs
+       */
+
+      if (
+        !Number.isFinite(investment) ||
+        !Number.isFinite(labor) ||
+        !Number.isFinite(material) ||
+        !Number.isFinite(profit) ||
+        investment <= 0 ||
+        labor < 0 ||
+        material < 0 ||
+        profit < 0
+      ) {
+
+        error.textContent =
+          "Enter valid values for the packaging investment and annual benefits.";
+
+        error.style.display =
+          "block";
+
+        result.textContent =
+          "—";
+
+        resultSub.textContent =
+          "";
+
+        return;
+
+      }
+
+
+
+      /*
+       * Annual benefit
+       */
+
+      const annualBenefit =
+        labor +
+        material +
+        profit;
+
+
+
+      /*
+       * ROI
+       *
+       * ROI =
+       * ((Annual Benefit - Investment)
+       * / Investment) × 100
+       */
+
+      const roi =
+        (
+          (annualBenefit - investment)
+          / investment
+        ) * 100;
+
+
+
+      /*
+       * Simple payback period
+       */
+
+      let payback =
+        "—";
+
+
+      if (annualBenefit > 0) {
+
+        payback =
+          (investment / annualBenefit).toFixed(2)
+          + " years";
+
+      }
+
+
+
+      /*
+       * Display ROI
+       */
+
+      result.textContent =
+        roi.toFixed(2) + "%";
+
+
+
+      /*
+       * Display additional result
+       */
+
+      resultSub.textContent =
+        "Annual benefit: $" +
+        annualBenefit.toLocaleString(
+          undefined,
+          {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }
+        ) +
+        " · Simple payback: " +
+        payback;
+
+
+
+      /*
+       * Hide error
+       */
+
+      error.style.display =
+        "none";
+
+    }
+
+  );
+
+</script>
+
+
+</body>
+
+</html>
