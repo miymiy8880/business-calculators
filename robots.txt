@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miymiy8880.github.io/business-calculators/sitemap.xml
