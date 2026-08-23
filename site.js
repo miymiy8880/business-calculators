@@ -1,0 +1,2 @@
+const input=document.querySelector('#search');
+if(input){const cards=[...document.querySelectorAll('.card')],empty=document.querySelector('#empty');input.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();let n=0;cards.forEach(c=>{const ok=(c.dataset.search+' '+c.textContent).toLowerCase().includes(q);c.style.display=ok?'flex':'none';if(ok)n++});empty.style.display=n?'none':'block'})}
