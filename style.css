@@ -6,6 +6,7 @@
   --border: #deded9;
   --accent: #111111;
   --max-width: 1180px;
+  --mobile-gutter: 22px;
 }
 
 * {
@@ -27,6 +28,7 @@ body {
     "Segoe UI",
     sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -35,7 +37,10 @@ a {
 }
 
 .container {
-  width: min(1180px, calc(100% - 40px));
+  width: min(
+    var(--max-width),
+    calc(100% - 40px)
+  );
   margin: 0 auto;
 }
 
@@ -44,7 +49,9 @@ a {
 }
 
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .site-header {
   background: rgba(247, 247, 245, 0.94);
@@ -87,7 +94,9 @@ a {
 }
 
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
   padding: 110px 0 90px;
@@ -118,9 +127,12 @@ a {
 }
 
 
-/* SEARCH */
+/* =====================================================
+   SEARCH
+===================================================== */
 
 .search-box {
+  width: 100%;
   max-width: 620px;
 }
 
@@ -140,7 +152,9 @@ a {
 }
 
 
-/* CALCULATORS */
+/* =====================================================
+   CALCULATORS
+===================================================== */
 
 .calculator-section {
   padding: 100px 0;
@@ -217,7 +231,9 @@ a {
 }
 
 
-/* ABOUT */
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about-section {
   padding: 100px 0;
@@ -231,7 +247,9 @@ a {
 }
 
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -268,7 +286,9 @@ a {
 }
 
 
-/* CALCULATOR PAGE */
+/* =====================================================
+   CALCULATOR PAGE
+===================================================== */
 
 .calculator-page {
   padding: 80px 0 100px;
@@ -367,7 +387,9 @@ a {
 }
 
 
-/* CONTENT */
+/* =====================================================
+   CONTENT
+===================================================== */
 
 .content-section {
   padding: 80px 0;
@@ -387,6 +409,8 @@ a {
 
 .formula {
   display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
   margin: 15px 0;
   padding: 18px 22px;
   background: #111;
@@ -397,7 +421,9 @@ a {
 }
 
 
-/* FAQ */
+/* =====================================================
+   FAQ
+===================================================== */
 
 .faq {
   border-top: 1px solid var(--border);
@@ -418,13 +444,33 @@ a {
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 800px) {
 
+  /*
+   * Main mobile gutter
+   *
+   * Previously:
+   * calc(100% - 28px)
+   *
+   * = only 14px on each side.
+   *
+   * Now:
+   * 22px on each side.
+   */
+
   .container {
-    width: min(100% - 28px, 1180px);
+    width: calc(100% - 44px);
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
   }
+
+
+  /* HEADER */
 
   .nav {
     min-height: 62px;
@@ -438,39 +484,213 @@ a {
     display: none;
   }
 
+
+  /* HERO */
+
   .hero {
-    padding: 75px 0 65px;
+    padding: 70px 0 60px;
   }
 
   .hero h1 {
-    font-size: 55px;
+    font-size: clamp(46px, 14vw, 60px);
+    line-height: 0.95;
+    max-width: 100%;
   }
 
-  .calculator-section,
-  .about-section,
-  .content-section {
+  .hero-text {
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+
+  /* SEARCH */
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .search-box input {
+    padding: 16px;
+  }
+
+
+  /* CALCULATOR LIBRARY */
+
+  .calculator-section {
     padding: 70px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .section-heading p {
+    font-size: 15px;
   }
 
   .calculator-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .calculator-card {
+    min-height: 220px;
+    padding: 25px;
+  }
+
+  .calculator-card h3 {
+    margin-top: 28px;
+    font-size: 24px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 70px 0;
+  }
+
+  .about-section p {
+    font-size: 16px;
+  }
+
+
+  /* CALCULATOR PAGE */
+
+  .calculator-page {
+    padding: 60px 0 80px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 25px;
   }
 
   .calculator-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 35px;
   }
 
   .calculator-intro h1 {
-    font-size: 50px;
+    font-size: clamp(44px, 13vw, 56px);
+    line-height: 0.98;
+  }
+
+  .calculator-intro > p {
+    font-size: 17px;
+  }
+
+
+  /* CALCULATOR BOX */
+
+  .calculator-box {
+    padding: 24px;
+  }
+
+  .form-group input {
+    padding: 15px;
+  }
+
+  .result-box {
+    padding: 22px;
+  }
+
+  .result-value {
+    font-size: 38px;
+  }
+
+
+  /* CONTENT */
+
+  .content-section {
+    padding: 65px 0;
+  }
+
+  .content-section h2 {
+    font-size: 30px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+  }
+
+
+  /* FORMULA */
+
+  .formula {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+
+  /* FOOTER */
+
+  .site-footer {
+    padding: 45px 0 25px;
   }
 
   .footer-inner {
     flex-direction: column;
+    gap: 25px;
   }
 
   .footer-inner div:last-child {
     flex-direction: column;
     gap: 10px;
   }
+
+  .copyright {
+    margin-top: 40px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .calculator-card {
+    padding: 22px;
+  }
+
+  .calculator-card h3 {
+    font-size: 22px;
+  }
+
+  .calculator-box {
+    padding: 20px;
+  }
+
+  .calculator-intro h1 {
+    font-size: 43px;
+  }
+
 }
