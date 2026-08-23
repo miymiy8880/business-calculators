@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Employee ROI Calculator | Business Calculators</title>
+
+  <meta
+    name="description"
+    content="Calculate employee ROI by comparing measurable value generated with total employee cost."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://miymiy8880.github.io/business-calculators/calculators/employee-roi.html"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Employee ROI Calculator"
+  >
+
+  <meta
+    property="og:description"
+    content="Estimate employee ROI by comparing measurable value generated with employment cost."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://miymiy8880.github.io/business-calculators/calculators/employee-roi.html"
+  >
+
+  <!-- Shared stylesheet -->
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
+  <!-- WebApplication structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Employee ROI Calculator",
+    "url": "https://miymiy8880.github.io/business-calculators/calculators/employee-roi.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "description": "Calculate employee ROI by comparing measurable value generated with total employee cost.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- FAQ structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ROI, or return on investment, measures the return generated relative to the cost of an investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is employee ROI calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employee ROI is calculated by subtracting total employee cost from measurable value generated, dividing the result by employee cost, and multiplying by 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can employee ROI be negative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A negative employee ROI means the measurable value generated is lower than the employee cost under the assumptions used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I include in employee cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employee cost can include salary, employer taxes, benefits, bonuses, recruitment costs, training costs and other directly attributable employment expenses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is employee ROI the same as profit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Profit is an absolute monetary amount. ROI expresses the return relative to the cost used to generate it."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body data-calculator="employee-roi">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a
+      class="brand"
+      href="../index.html"
+      aria-label="Business Calculators home"
+    >
+      BUSINESS<span>CALCULATORS</span>
+    </a>
+
+    <nav>
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      <a href="../index.html#about">
+        About
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     CALCULATOR INTRO + CALCULATOR
+========================================================= -->
+
+<section class="page">
+
+  <div class="wrap">
+
+
+    <!-- Breadcrumb -->
+
+    <div class="crumb">
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      /
+
+      Employee ROI Calculator
+
+    </div>
+
+
+
+    <div class="layout">
+
+
+      <!-- ===================================================
+           LEFT COLUMN
+      ==================================================== -->
+
+      <div class="intro">
+
+        <p class="kicker">
+          PEOPLE
+        </p>
+
+
+        <h1>
+          Employee ROI Calculator
+        </h1>
+
+
+        <p class="lead">
+          Estimate employee ROI by comparing measurable value
+          generated with employment cost.
+        </p>
+
+
+        <p>
+          Employee ROI compares value generated with total
+          employee cost.
+        </p>
+
+
+        <p>
+          Enter your assumptions to estimate the result.
+          Use consistent units and time periods when comparing
+          alternatives.
+        </p>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           CALCULATOR
+      ==================================================== -->
+
+      <div class="calc">
+
+        <h2>
+          Calculate
+        </h2>
+
+
+        <form id="employeeRoiForm">
+
+
+          <!-- Employee cost -->
+
+          <div class="field">
+
+            <label for="employeeCost">
+              Annual employee cost
+            </label>
+
+            <input
+              type="number"
+              id="employeeCost"
+              name="employeeCost"
+              placeholder="50000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Value generated -->
+
+          <div class="field">
+
+            <label for="valueGenerated">
+              Annual value generated
+            </label>
+
+            <input
+              type="number"
+              id="valueGenerated"
+              name="valueGenerated"
+              placeholder="90000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            Calculate
+          </button>
+
+
+          <div
+            class="error"
+            id="error"
+            role="alert"
+          >
+          </div>
+
+
+
+          <!-- Results -->
+
+          <div class="results">
+
+            <div class="result-label">
+              Calculated result
+            </div>
+
+
+            <div
+              class="result-main"
+              id="result"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-label"
+              id="resultSub"
+            >
+            </div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FORMULA
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Formula
+    </h2>
+
+
+    <p>
+      The calculation used by this tool is:
+    </p>
+
+
+    <code class="formula">
+      Employee ROI = ((Value Generated − Employee Cost)
+      ÷ Employee Cost) × 100
+    </code>
+
+
+    <p>
+      Employee ROI expresses the measurable return generated
+      by an employee relative to the total cost of employing
+      that person.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXAMPLE
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Example
+    </h2>
+
+
+    <div class="example">
+
+      <p>
+        An employee costs $50,000 and generates $90,000
+        in measurable value.
+      </p>
+
+
+      <p>
+        Net value:
+        <strong>$90,000 − $50,000 = $40,000</strong>
+      </p>
+
+
+      <p>
+        Employee ROI:
+        <strong>
+          ($40,000 ÷ $50,000) × 100 = 80%
+        </strong>
+      </p>
+
+
+      <p>
+        Therefore, the employee generates an estimated
+        ROI of <strong>80%</strong> under these assumptions.
+      </p>
+
+
+      <p class="disclaimer">
+        Actual performance can differ because of taxes,
+        financing, depreciation, working capital,
+        maintenance, attribution and other factors not
+        included in a simple ROI model.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INDUSTRY APPLICATIONS
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Industry applications
+    </h2>
+
+
+    <p>
+      This calculator can support preliminary analysis
+      in areas such as:
+    </p>
+
+
+    <ul>
+
+      <li>
+        Sales teams
+      </li>
+
+      <li>
+        Operations
+      </li>
+
+      <li>
+        Professional services
+      </li>
+
+      <li>
+        Employee training
+      </li>
+
+      <li>
+        Customer support
+      </li>
+
+      <li>
+        Engineering teams
+      </li>
+
+      <li>
+        Manufacturing personnel
+      </li>
+
+      <li>
+        Administrative teams
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Frequently asked questions
+    </h2>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          What is ROI?
+        </summary>
+
+        <p>
+          ROI, or return on investment, measures the return
+          generated relative to the cost of an investment.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          How is employee ROI calculated?
+        </summary>
+
+        <p>
+          Employee ROI is calculated by subtracting total
+          employee cost from measurable value generated,
+          dividing the result by employee cost, and
+          multiplying by 100.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Can employee ROI be negative?
+        </summary>
+
+        <p>
+          Yes. A negative employee ROI means the measurable
+          value generated is lower than the employee cost
+          under the assumptions used.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          What should I include in employee cost?
+        </summary>
+
+        <p>
+          Employee cost can include salary, employer taxes,
+          benefits, bonuses, recruitment costs, training
+          costs and other directly attributable employment
+          expenses.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Is employee ROI the same as profit?
+        </summary>
+
+        <p>
+          No. Profit is an absolute monetary amount.
+          ROI expresses the return relative to the cost
+          used to generate it.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RELATED CALCULATORS
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap">
+
+    <h2>
+      Related calculators
+    </h2>
+
+
+    <div class="related">
+
+
+      <a href="roi-calculator.html">
+        ROI Calculator
+      </a>
+
+
+      <a href="investment-roi.html">
+        Investment ROI Calculator
+      </a>
+
+
+      <a href="marketing-roi.html">
+        Marketing ROI Calculator
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISCLAIMER
+========================================================= -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <p class="disclaimer">
+      Disclaimer: This calculator provides estimates for
+      informational purposes and is not financial,
+      accounting, investment, tax or legal advice.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="wrap foot">
+
+
+    <div>
+
+      <strong>
+        Business Calculators
+      </strong>
+
+      <span>
+        Free tools for business and finance.
+      </span>
+
+    </div>
+
+
+    <a href="../index.html">
+      Home
+    </a>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     EMPLOYEE ROI CALCULATOR
+========================================================= -->
+
+<script>
+
+  const employeeForm =
+    document.getElementById("employeeRoiForm");
+
+
+  const employeeCost =
+    document.getElementById("employeeCost");
+
+
+  const valueGenerated =
+    document.getElementById("valueGenerated");
+
+
+  const result =
+    document.getElementById("result");
+
+
+  const resultSub =
+    document.getElementById("resultSub");
+
+
+  const error =
+    document.getElementById("error");
+
+
+  employeeForm.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      const cost =
+        Number(employeeCost.value);
+
+
+      const value =
+        Number(valueGenerated.value);
+
+
+      /*
+       * Validation
+       */
+
+      if (
+        !Number.isFinite(cost) ||
+        !Number.isFinite(value) ||
+        cost <= 0 ||
+        value < 0
+      ) {
+
+        error.textContent =
+          "Enter a valid employee cost and value generated.";
+
+        error.style.display =
+          "block";
+
+        result.textContent =
+          "—";
+
+        resultSub.textContent =
+          "";
+
+        return;
+
+      }
+
+
+      /*
+       * Employee ROI
+       *
+       * ROI =
+       * ((Value Generated - Employee Cost)
+       * / Employee Cost) × 100
+       */
+
+      const netValue =
+        value - cost;
+
+
+      const roi =
+        (netValue / cost) * 100;
+
+
+      /*
+       * Display ROI
+       */
+
+      result.textContent =
+        roi.toFixed(2) + "%";
+
+
+      /*
+       * Display additional information
+       */
+
+      resultSub.textContent =
+        "Net value: $" +
+        netValue.toLocaleString(
+          undefined,
+          {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }
+        );
+
+
+      /*
+       * Hide error
+       */
+
+      error.style.display =
+        "none";
+
+    }
+  );
+
+</script>
+
+
+</body>
+</html>
