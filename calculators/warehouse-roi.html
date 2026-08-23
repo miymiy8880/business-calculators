@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Warehouse ROI Calculator | Business Calculators</title>
+
+  <meta
+    name="description"
+    content="Evaluate warehouse investments using annual operating savings and additional profit."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://miymiy8880.github.io/business-calculators/calculators/warehouse-roi.html"
+  >
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Warehouse ROI Calculator">
+
+  <meta
+    property="og:description"
+    content="Evaluate warehouse investments using annual operating savings and additional profit."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:url"
+    content="https://miymiy8880.github.io/business-calculators/calculators/warehouse-roi.html"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
+
+  <!-- WebApplication structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Warehouse ROI Calculator",
+    "description": "Evaluate warehouse investments using annual operating savings and additional profit.",
+    "url": "https://miymiy8880.github.io/business-calculators/calculators/warehouse-roi.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+
+  <!-- FAQ structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ROI, or return on investment, measures the return generated relative to the investment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this calculator calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Warehouse ROI is calculated by adding annual labor savings, annual operating savings and annual additional profit to determine annual benefit, subtracting the warehouse investment, dividing by the investment and multiplying by 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ROI be negative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A negative ROI means the annual benefits do not recover the warehouse investment under the assumptions used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Include the warehouse investment and realistic annual labor savings, operating savings and additional profit attributable to the project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ROI the same as profit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Profit or savings are absolute monetary amounts, while ROI expresses the net benefit relative to the original investment."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body data-calculator="warehouse-roi">
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a
+      class="brand"
+      href="../index.html"
+      aria-label="Business Calculators home"
+    >
+      BUSINESS<span>CALCULATORS</span>
+    </a>
+
+
+    <nav>
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      <a href="../index.html#about">
+        About
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     INTRO + CALCULATOR
+====================================================== -->
+
+<section class="page">
+
+  <div class="wrap">
+
+
+    <!-- Breadcrumb -->
+
+    <div class="crumb">
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      /
+
+      Warehouse ROI Calculator
+
+    </div>
+
+
+
+    <div class="layout">
+
+
+      <!-- =================================================
+           INTRO
+      ================================================== -->
+
+      <div class="intro">
+
+        <p class="kicker">
+          WAREHOUSING
+        </p>
+
+
+        <h1>
+          Warehouse ROI Calculator
+        </h1>
+
+
+        <p class="lead">
+          Evaluate warehouse investments using annual
+          operating savings and additional profit.
+        </p>
+
+
+        <p>
+          Warehouse ROI compares annual benefits with
+          warehouse investment.
+        </p>
+
+
+        <p>
+          Enter your assumptions to estimate the result.
+          Use consistent units and time periods when
+          comparing alternatives.
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CALCULATOR
+      ================================================== -->
+
+      <div class="calc">
+
+        <h2>
+          Calculate
+        </h2>
+
+
+        <form id="warehouseRoiForm">
+
+
+          <!-- Warehouse investment -->
+
+          <div class="field">
+
+            <label for="warehouseInvestment">
+              Warehouse investment
+            </label>
+
+            <input
+              type="number"
+              id="warehouseInvestment"
+              name="warehouseInvestment"
+              placeholder="200000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Labor savings -->
+
+          <div class="field">
+
+            <label for="laborSavings">
+              Annual labor savings
+            </label>
+
+            <input
+              type="number"
+              id="laborSavings"
+              name="laborSavings"
+              placeholder="60000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Operating savings -->
+
+          <div class="field">
+
+            <label for="operatingSavings">
+              Annual operating savings
+            </label>
+
+            <input
+              type="number"
+              id="operatingSavings"
+              name="operatingSavings"
+              placeholder="30000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Additional profit -->
+
+          <div class="field">
+
+            <label for="additionalProfit">
+              Annual additional profit
+            </label>
+
+            <input
+              type="number"
+              id="additionalProfit"
+              name="additionalProfit"
+              placeholder="20000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            Calculate
+          </button>
+
+
+
+          <div
+            class="error"
+            id="error"
+            role="alert"
+          ></div>
+
+
+
+          <!-- Results -->
+
+          <div class="results">
+
+            <div class="result-label">
+              Calculated result
+            </div>
+
+
+            <div
+              class="result-main"
+              id="result"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-label"
+              id="resultSub"
+            ></div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FORMULA
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Formula
+    </h2>
+
+
+    <p>
+      The calculation used by this tool is:
+    </p>
+
+
+    <code class="formula">
+      ROI = ((Annual Benefit − Investment) ÷ Investment) × 100
+    </code>
+
+
+    <p>
+      Where annual benefit is the sum of annual labor
+      savings, annual operating savings and annual
+      additional profit.
+    </p>
+
+
+    <code class="formula">
+      Annual Benefit = Labor Savings + Operating Savings + Additional Profit
+    </code>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXAMPLE
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Example
+    </h2>
+
+
+    <div class="example">
+
+      <p>
+        A <strong>$200,000</strong> project produces
+        <strong>$60,000</strong> in annual labor savings,
+        <strong>$30,000</strong> in annual operating savings
+        and <strong>$20,000</strong> in annual additional
+        profit.
+      </p>
+
+
+      <p>
+        Annual benefit:
+        <strong>
+          $60,000 + $30,000 + $20,000 = $110,000
+        </strong>
+      </p>
+
+
+      <p>
+        Warehouse ROI:
+        <strong>
+          (($110,000 − $200,000) ÷ $200,000) × 100
+          = −45%
+        </strong>
+      </p>
+
+
+      <p>
+        Under this simple first-year ROI model, the project
+        produces a <strong>−45% ROI</strong> because its
+        first-year benefits do not fully recover the
+        initial investment.
+      </p>
+
+
+      <p class="disclaimer">
+        Actual performance can differ because of taxes,
+        financing, depreciation, working capital,
+        maintenance, attribution and other factors not
+        included in a simple ROI model.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INDUSTRY APPLICATIONS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Industry applications
+    </h2>
+
+
+    <p>
+      This calculator can support preliminary analysis
+      in areas such as:
+    </p>
+
+
+    <ul>
+
+      <li>
+        Warehouse automation
+      </li>
+
+      <li>
+        Storage expansion
+      </li>
+
+      <li>
+        Material handling
+      </li>
+
+      <li>
+        Logistics operations
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Frequently asked questions
+    </h2>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          What is ROI?
+        </summary>
+
+        <p>
+          ROI, or return on investment, measures the return
+          generated relative to the investment required.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          How is this calculator calculated?
+        </summary>
+
+        <p>
+          Warehouse ROI is calculated by adding annual
+          labor savings, annual operating savings and
+          annual additional profit to determine annual
+          benefit. The investment is then subtracted from
+          annual benefit, divided by the investment and
+          multiplied by 100.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Can ROI be negative?
+        </summary>
+
+        <p>
+          Yes. A negative ROI means the annual benefits do
+          not recover the warehouse investment under the
+          assumptions used.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          What should I include?
+        </summary>
+
+        <p>
+          Include the warehouse investment and realistic
+          annual labor savings, operating savings and
+          additional profit attributable to the project.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Is ROI the same as profit?
+        </summary>
+
+        <p>
+          No. Profit or savings are absolute monetary
+          amounts, while ROI expresses the net benefit
+          relative to the original investment.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RELATED CALCULATORS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap">
+
+    <h2>
+      Related calculators
+    </h2>
+
+
+    <div class="related">
+
+
+      <a href="roi-calculator.html">
+        ROI Calculator
+      </a>
+
+
+      <a href="investment-roi.html">
+        Investment ROI Calculator
+      </a>
+
+
+      <a href="marketing-roi.html">
+        Marketing ROI Calculator
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <p class="disclaimer">
+      Disclaimer: This calculator provides estimates for
+      informational purposes and is not financial,
+      accounting, investment, tax or legal advice.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="wrap foot">
+
+    <div>
+
+      <strong>
+        Business Calculators
+      </strong>
+
+      <span>
+        Free tools for business and finance.
+      </span>
+
+    </div>
+
+
+    <a href="../index.html">
+      Home
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CALCULATOR LOGIC
+====================================================== -->
+
+<script>
+
+  const form =
+    document.getElementById("warehouseRoiForm");
+
+
+  const warehouseInvestment =
+    document.getElementById("warehouseInvestment");
+
+
+  const laborSavings =
+    document.getElementById("laborSavings");
+
+
+  const operatingSavings =
+    document.getElementById("operatingSavings");
+
+
+  const additionalProfit =
+    document.getElementById("additionalProfit");
+
+
+  const result =
+    document.getElementById("result");
+
+
+  const resultSub =
+    document.getElementById("resultSub");
+
+
+  const error =
+    document.getElementById("error");
+
+
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      const investment =
+        Number(warehouseInvestment.value);
+
+
+      const labor =
+        Number(laborSavings.value);
+
+
+      const operating =
+        Number(operatingSavings.value);
+
+
+      const profit =
+        Number(additionalProfit.value);
+
+
+
+      /*
+       * Validate inputs
+       */
+
+      if (
+        !Number.isFinite(investment) ||
+        !Number.isFinite(labor) ||
+        !Number.isFinite(operating) ||
+        !Number.isFinite(profit) ||
+        investment <= 0 ||
+        labor < 0 ||
+        operating < 0 ||
+        profit < 0
+      ) {
+
+        error.textContent =
+          "Enter valid values for the warehouse investment and annual benefits.";
+
+        error.style.display =
+          "block";
+
+        result.textContent =
+          "—";
+
+        resultSub.textContent =
+          "";
+
+        return;
+
+      }
+
+
+
+      /*
+       * Annual benefit
+       */
+
+      const annualBenefit =
+        labor +
+        operating +
+        profit;
+
+
+
+      /*
+       * ROI
+       *
+       * ROI =
+       * ((Annual Benefit - Investment)
+       * / Investment) × 100
+       */
+
+      const roi =
+        (
+          (annualBenefit - investment)
+          / investment
+        ) * 100;
+
+
+
+      /*
+       * Simple payback period
+       */
+
+      let payback =
+        "—";
+
+
+      if (annualBenefit > 0) {
+
+        payback =
+          (investment / annualBenefit).toFixed(2)
+          + " years";
+
+      }
+
+
+
+      /*
+       * Display ROI
+       */
+
+      result.textContent =
+        roi.toFixed(2) + "%";
+
+
+
+      /*
+       * Display additional result
+       */
+
+      resultSub.textContent =
+        "Annual benefit: $" +
+        annualBenefit.toLocaleString(
+          undefined,
+          {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }
+        ) +
+        " · Simple payback: " +
+        payback;
+
+
+
+      /*
+       * Hide error
+       */
+
+      error.style.display =
+        "none";
+
+    }
+
+  );
+
+</script>
+
+
+</body>
+
+</html>
