@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Marketing ROI Calculator | Business Calculators</title>
+
+  <meta
+    name="description"
+    content="Calculate marketing ROI using campaign cost and attributable return."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://miymiy8880.github.io/business-calculators/calculators/marketing-roi.html"
+  >
+
+  <!-- Open Graph -->
+
+  <meta
+    property="og:title"
+    content="Marketing ROI Calculator"
+  >
+
+  <meta
+    property="og:description"
+    content="Calculate marketing ROI using campaign cost and attributable return."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://miymiy8880.github.io/business-calculators/calculators/marketing-roi.html"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
+
+  <!-- WebApplication structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Marketing ROI Calculator",
+    "description": "Calculate marketing ROI using campaign cost and attributable return.",
+    "url": "https://miymiy8880.github.io/business-calculators/calculators/marketing-roi.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+
+  <!-- FAQ structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ROI, or return on investment, measures the return generated relative to the cost of an investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this calculator calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Marketing ROI is calculated by subtracting marketing cost from attributable return, dividing by marketing cost, and multiplying by 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ROI be negative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A negative marketing ROI means the attributable return is lower than the marketing cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Include the total marketing cost for the campaign and the return that can reasonably be attributed to that campaign."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ROI the same as profit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Profit or return is an absolute monetary amount, while ROI expresses the return relative to the marketing cost."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+
+<body data-calculator="marketing-roi">
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a
+      class="brand"
+      href="../index.html"
+      aria-label="Business Calculators home"
+    >
+      BUSINESS<span>CALCULATORS</span>
+    </a>
+
+
+    <nav>
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      <a href="../index.html#about">
+        About
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     INTRO + CALCULATOR
+====================================================== -->
+
+<section class="page">
+
+  <div class="wrap">
+
+
+    <!-- Breadcrumb -->
+
+    <div class="crumb">
+
+      <a href="../index.html">
+        Calculators
+      </a>
+
+      /
+
+      Marketing ROI Calculator
+
+    </div>
+
+
+
+    <div class="layout">
+
+
+      <!-- =================================================
+           INTRO
+      ================================================== -->
+
+      <div class="intro">
+
+        <p class="kicker">
+          MARKETING
+        </p>
+
+
+        <h1>
+          Marketing ROI Calculator
+        </h1>
+
+
+        <p class="lead">
+          Calculate marketing ROI using campaign cost
+          and attributable return.
+        </p>
+
+
+        <p>
+          Marketing ROI compares attributable return
+          with marketing cost.
+        </p>
+
+
+        <p>
+          Enter your assumptions to estimate the result.
+          Use consistent units and time periods when
+          comparing alternatives.
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           CALCULATOR
+      ================================================== -->
+
+      <div class="calc">
+
+        <h2>
+          Calculate
+        </h2>
+
+
+        <form id="marketingRoiForm">
+
+
+          <!-- Marketing cost -->
+
+          <div class="field">
+
+            <label for="marketingCost">
+              Marketing cost
+            </label>
+
+            <input
+              type="number"
+              id="marketingCost"
+              name="marketingCost"
+              placeholder="10000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- Attributable return -->
+
+          <div class="field">
+
+            <label for="attributableReturn">
+              Attributable return
+            </label>
+
+            <input
+              type="number"
+              id="attributableReturn"
+              name="attributableReturn"
+              placeholder="25000"
+              min="0"
+              step="any"
+              inputmode="decimal"
+              required
+            >
+
+          </div>
+
+
+
+          <button
+            class="btn"
+            type="submit"
+          >
+            Calculate
+          </button>
+
+
+
+          <div
+            class="error"
+            id="error"
+            role="alert"
+          ></div>
+
+
+
+          <!-- Results -->
+
+          <div class="results">
+
+            <div class="result-label">
+              Calculated result
+            </div>
+
+
+            <div
+              class="result-main"
+              id="result"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-label"
+              id="resultSub"
+            ></div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FORMULA
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Formula
+    </h2>
+
+
+    <p>
+      The calculation used by this tool is:
+    </p>
+
+
+    <code class="formula">
+      Marketing ROI = ((Attributable Return − Marketing Cost)
+      ÷ Marketing Cost) × 100
+    </code>
+
+
+    <p>
+      The calculation measures the net return from a
+      marketing campaign relative to the cost of the
+      campaign.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXAMPLE
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Example
+    </h2>
+
+
+    <div class="example">
+
+      <p>
+        A campaign costs
+        <strong>$10,000</strong>
+        and generates
+        <strong>$25,000</strong>
+        of attributable return.
+      </p>
+
+
+      <p>
+        Net return:
+        <strong>
+          $25,000 − $10,000 = $15,000
+        </strong>
+      </p>
+
+
+      <p>
+        Marketing ROI:
+        <strong>
+          (($25,000 − $10,000) ÷ $10,000) × 100
+          = 150%
+        </strong>
+      </p>
+
+
+      <p>
+        Therefore, the campaign has a simple ROI of
+        <strong>150%</strong>.
+      </p>
+
+
+      <p class="disclaimer">
+        Actual performance can differ because of taxes,
+        financing, depreciation, working capital,
+        maintenance, attribution and other factors not
+        included in a simple ROI model.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INDUSTRY APPLICATIONS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Industry applications
+    </h2>
+
+
+    <p>
+      This calculator can support preliminary analysis
+      in areas such as:
+    </p>
+
+
+    <ul>
+
+      <li>
+        Paid advertising
+      </li>
+
+      <li>
+        Digital marketing
+      </li>
+
+      <li>
+        Lead generation
+      </li>
+
+      <li>
+        E-commerce campaigns
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <h2>
+      Frequently asked questions
+    </h2>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          What is ROI?
+        </summary>
+
+        <p>
+          ROI, or return on investment, measures the
+          return generated relative to the cost of an
+          investment.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          How is this calculator calculated?
+        </summary>
+
+        <p>
+          Marketing ROI is calculated by subtracting
+          marketing cost from attributable return,
+          dividing by marketing cost, and multiplying
+          by 100.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Can ROI be negative?
+        </summary>
+
+        <p>
+          Yes. A negative marketing ROI means the
+          attributable return is lower than the
+          marketing cost.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          What should I include?
+        </summary>
+
+        <p>
+          Include the total marketing cost for the
+          campaign and the return that can reasonably
+          be attributed to that campaign.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          Is ROI the same as profit?
+        </summary>
+
+        <p>
+          No. Profit or return is an absolute monetary
+          amount, while ROI expresses the return relative
+          to the marketing cost.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RELATED CALCULATORS
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap">
+
+    <h2>
+      Related calculators
+    </h2>
+
+
+    <div class="related">
+
+
+      <a href="roi-calculator.html">
+        ROI Calculator
+      </a>
+
+
+      <a href="investment-roi.html">
+        Investment ROI Calculator
+      </a>
+
+
+      <a href="manufacturing-roi.html">
+        Manufacturing ROI Calculator
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+====================================================== -->
+
+<section class="content">
+
+  <div class="wrap narrow">
+
+    <p class="disclaimer">
+      Disclaimer: This calculator provides estimates for
+      informational purposes and is not financial,
+      accounting, investment, tax or legal advice.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="wrap foot">
+
+    <div>
+
+      <strong>
+        Business Calculators
+      </strong>
+
+      <span>
+        Free tools for business and finance.
+      </span>
+
+    </div>
+
+
+    <a href="../index.html">
+      Home
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     CALCULATOR LOGIC
+====================================================== -->
+
+<script>
+
+  const form =
+    document.getElementById("marketingRoiForm");
+
+
+  const marketingCost =
+    document.getElementById("marketingCost");
+
+
+  const attributableReturn =
+    document.getElementById("attributableReturn");
+
+
+  const result =
+    document.getElementById("result");
+
+
+  const resultSub =
+    document.getElementById("resultSub");
+
+
+  const error =
+    document.getElementById("error");
+
+
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      const cost =
+        Number(marketingCost.value);
+
+
+      const returnValue =
+        Number(attributableReturn.value);
+
+
+
+      /*
+       * Validate inputs
+       */
+
+      if (
+        !Number.isFinite(cost) ||
+        !Number.isFinite(returnValue) ||
+        cost <= 0 ||
+        returnValue < 0
+      ) {
+
+        error.textContent =
+          "Enter valid values for marketing cost and attributable return.";
+
+        error.style.display =
+          "block";
+
+        result.textContent =
+          "—";
+
+        resultSub.textContent =
+          "";
+
+        return;
+
+      }
+
+
+
+      /*
+       * Net return
+       */
+
+      const netReturn =
+        returnValue - cost;
+
+
+
+      /*
+       * Marketing ROI
+       *
+       * ROI =
+       * ((Attributable Return - Marketing Cost)
+       * / Marketing Cost) × 100
+       */
+
+      const roi =
+        (netReturn / cost) * 100;
+
+
+
+      /*
+       * Display ROI
+       */
+
+      result.textContent =
+        roi.toFixed(2) + "%";
+
+
+
+      /*
+       * Display additional result
+       */
+
+      resultSub.textContent =
+        "Net return: $" +
+        netReturn.toLocaleString(
+          undefined,
+          {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }
+        );
+
+
+
+      /*
+       * Hide error
+       */
+
+      error.style.display =
+        "none";
+
+    }
+
+  );
+
+</script>
+
+
+</body>
+
+</html>
